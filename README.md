@@ -8,6 +8,8 @@ Portail **autonome** de l'univers WarLike, indépendant des dépôts **WarLike S
 - Filtres Création, Communauté, Outils personnels, Équipe & serveur
 - Recherche instantanée et favoris enregistrés **localement** dans le navigateur
 - Interface responsive, cartes et icônes SVG
+- Navigation mobile par menu latéral, accessible au clavier (Échap, focus contenu), fermeture au clic extérieur et après choix d'un dossier
+- Cartes, recherche et zones tactiles adaptées aux petits écrans, prise en charge des marges de sécurité mobiles
 - Liens séparés vers le Hub et vers l'infrastructure privée `/serveur`
 
 ## Hébergement
@@ -29,3 +31,7 @@ La version historique du Hub reste actuellement accessible à la racine de `http
 - `index.html` : application et structure sémantique
 - `style.css` : interface et adaptation mobile
 - `app.js` : catalogue, dossiers, recherche et favoris
+
+## Contrôles mobiles
+
+Vérifier à 320, 375, 430 et 768 px : menu ouvrable et fermable, contenu accessible sans débordement horizontal, recherche fonctionnelle, tous les dossiers disponibles, liens d'applications utilisables et favoris persistants. Le contrôle syntaxique JavaScript et la présence des identifiants DOM ont été vérifiés ; la validation visuelle et tactile sur Android/iOS reste à réaliser.
