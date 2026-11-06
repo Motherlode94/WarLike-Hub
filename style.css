@@ -55,3 +55,5 @@ body{overflow-x:hidden}
 }
 @media(min-width:460px) and (max-width:600px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.card{padding:15px}.card h3{font-size:19px}.card p{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.side,.card{transition:none!important}}
+
+@media(max-width:850px){#applications{scroll-margin-top:80px}}
