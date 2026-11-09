@@ -1,0 +1,29 @@
+/* WarLike Design System v1.0 — canonical five-color palette */
+:root,[data-warlike-theme="light"]{
+  --wl-forest:#37463D;--wl-slate:#5B696B;--wl-graphite:#535953;
+  --wl-ivory:#F8FBF1;--wl-sage:#C5C5A9;
+  --wl-bg:var(--wl-ivory);--wl-surface:#FFFFFF;--wl-surface-alt:#EEF1E6;
+  --wl-text:var(--wl-forest);--wl-text-muted:var(--wl-graphite);
+  --wl-primary:var(--wl-forest);--wl-primary-text:var(--wl-ivory);
+  --wl-secondary:var(--wl-slate);--wl-secondary-text:#FFFFFF;
+  --wl-accent:var(--wl-sage);--wl-accent-text:var(--wl-forest);
+  --wl-border:#B0B7A8;--wl-focus:var(--wl-slate);
+  --wl-radius-sm:8px;--wl-radius-md:14px;--wl-radius-lg:20px;
+  --wl-shadow:0 12px 30px #37463D1A;color-scheme:light;
+}
+[data-warlike-theme="dark"]{
+  --wl-bg:#17211B;--wl-surface:#233027;--wl-surface-alt:var(--wl-forest);
+  --wl-text:var(--wl-ivory);--wl-text-muted:#D4DCCA;
+  --wl-primary:var(--wl-sage);--wl-primary-text:#17211B;
+  --wl-secondary:var(--wl-slate);--wl-secondary-text:#FFFFFF;
+  --wl-accent:var(--wl-sage);--wl-accent-text:#17211B;
+  --wl-border:#596A5C;--wl-focus:var(--wl-sage);
+  --wl-shadow:0 12px 30px #00000040;color-scheme:dark;
+}
+.wl-app{background:var(--wl-bg);color:var(--wl-text)}
+.wl-card{background:var(--wl-surface);color:var(--wl-text);border:1px solid var(--wl-border);border-radius:var(--wl-radius-md);box-shadow:var(--wl-shadow)}
+.wl-button-primary{background:var(--wl-primary);color:var(--wl-primary-text);border:1px solid var(--wl-primary);border-radius:var(--wl-radius-sm)}
+.wl-button-secondary{background:var(--wl-secondary);color:var(--wl-secondary-text);border:1px solid var(--wl-secondary);border-radius:var(--wl-radius-sm)}
+.wl-button-accent{background:var(--wl-accent);color:var(--wl-accent-text);border:1px solid var(--wl-accent);border-radius:var(--wl-radius-sm)}
+.wl-input{color:var(--wl-text);background:var(--wl-surface);border:1px solid var(--wl-border);border-radius:var(--wl-radius-sm)}
+.wl-app :is(button,input,select,textarea,a):focus-visible{outline:3px solid var(--wl-focus);outline-offset:2px}
