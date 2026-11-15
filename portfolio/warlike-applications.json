@@ -1,0 +1,363 @@
+{
+  "schema": "warlike-portfolio-v1",
+  "reviewedAt": "2026-11-16",
+  "source": "GitHub Motherlode94, liste des dépôts et README accessibles sur main",
+  "scope": {
+    "repositoryCount": 32,
+    "verification": "Documentation et code consultés. Aucun test end-to-end ni disponibilité de production n’est confirmé par cet inventaire."
+  },
+  "applications": [
+    {
+      "repository": "WarLike-Engine",
+      "category": "creation",
+      "priority": "P0",
+      "role": "Moteur 2D/3D",
+      "nextCheck": "Valider rendu glTF, Animator, physique et export autonome en navigateur",
+      "dependencies": "Library, Asset Stores, Rig Studio",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Engine",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Studio",
+      "category": "creation",
+      "priority": "P0",
+      "role": "Production musicale",
+      "nextCheck": "Vérifier prise réelle, mix/master, persistance des projets, isolation de comptes",
+      "dependencies": "Server, Keys",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Studio",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Server",
+      "category": "infra",
+      "priority": "P0",
+      "role": "API, identité et données D1/R2",
+      "nextCheck": "Tester sessions, rôles, secrets, migrations, santé et contrôle inter-domaines",
+      "dependencies": "Cloudflare D1, R2",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Server",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Tower",
+      "category": "infra",
+      "priority": "P0",
+      "role": "Console d’administration",
+      "nextCheck": "Valider la session propriétaire et les autorisations de déploiement",
+      "dependencies": "Server, Cloudflare Pages",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Tower",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Online",
+      "category": "community",
+      "priority": "P0",
+      "role": "Réseau social",
+      "nextCheck": "Tester deux comptes isolés, liaison Server, médias R2 et modération",
+      "dependencies": "Server, D1, R2",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Online",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Mail",
+      "category": "community",
+      "priority": "P0",
+      "role": "Messagerie interne",
+      "nextCheck": "Tester comptes et accès aux messages ; ne pas confondre avec e-mail SMTP/IMAP",
+      "dependencies": "Server",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Mail",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Chat",
+      "category": "community",
+      "priority": "P0",
+      "role": "Salons et messages",
+      "nextCheck": "Tester autorisations et mises à jour entre deux navigateurs",
+      "dependencies": "Server, D1",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Chat",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "CodeDuo-Academy",
+      "category": "education",
+      "priority": "P0",
+      "role": "Cours de code et collaboration",
+      "nextCheck": "Valider auth D1, tables de binômes, WebSocket/temps réel et test deux étudiants",
+      "dependencies": "Cloudflare, D1",
+      "repositoryUrl": "https://github.com/Motherlode94/CodeDuo-Academy",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Heart",
+      "category": "creation",
+      "priority": "P0",
+      "role": "Avatar conversationnel",
+      "nextCheck": "Vérifier IA et secrets backend, confidentialité, persistance GLB",
+      "dependencies": "Server, modèle IA, Rig Studio",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Heart",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Rig-Studio",
+      "category": "creation",
+      "priority": "P0",
+      "role": "Rigging de personnages",
+      "nextCheck": "Tester sept GLB réels, poids, déformations et export→réimport",
+      "dependencies": "Virtual Idols, Engine",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Rig-Studio",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Virtual-Idols",
+      "category": "creation",
+      "priority": "P0",
+      "role": "Sept artistes virtuels",
+      "nextCheck": "Valider morph targets, voix chantée, clips et publication réelle",
+      "dependencies": "Meshy, Rig Studio, Studio, Monteur",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Virtual-Idols",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Library",
+      "category": "assets",
+      "priority": "P1",
+      "role": "Bibliothèque d’assets et prefabs",
+      "nextCheck": "Tester transfert complet PNG/GLB/scripts et restauration sans perte",
+      "dependencies": "Asset Stores, Engine",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Library",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Asset-Stores",
+      "category": "assets",
+      "priority": "P1",
+      "role": "Catalogue de ressources et extensions",
+      "nextCheck": "Vérifier licences, signatures, téléchargements et installation Library",
+      "dependencies": "Library, Engine",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Asset-Stores",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Ebook",
+      "category": "creation",
+      "priority": "P1",
+      "role": "Romans et lecteur numérique",
+      "nextCheck": "Valider EPUB/PDF sur navigateur, restauration et accès privés",
+      "dependencies": "Server (futur)",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Ebook",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Monteur",
+      "category": "creation",
+      "priority": "P1",
+      "role": "Montage vidéo WebM",
+      "nextCheck": "Tester mixage audio, export et lecture du fichier dans un logiciel indépendant",
+      "dependencies": "Node",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Monteur",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Node",
+      "category": "creation",
+      "priority": "P1",
+      "role": "Graphe de compositing",
+      "nextCheck": "Valider lecture multi-vidéo et rendu/export avec synchronisation temporelle",
+      "dependencies": "Monteur",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Node",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Modeliser",
+      "category": "creation",
+      "priority": "P1",
+      "role": "Modélisation 2D et 3D",
+      "nextCheck": "Tester fidélité des exports GLB et transfert vers Engine",
+      "dependencies": "Engine",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Modeliser",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "GAME_HUB-v2",
+      "category": "games",
+      "priority": "P1",
+      "role": "Portail de jeux",
+      "nextCheck": "Inventorier les jeux jouables et mesurer démos 2D/3D en navigateur",
+      "dependencies": "Engine",
+      "repositoryUrl": "https://github.com/Motherlode94/GAME_HUB-v2",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Android-Hub",
+      "category": "platform",
+      "priority": "P1",
+      "role": "Annuaire Android natif",
+      "nextCheck": "Signer APK release et tester installation sur téléphone",
+      "dependencies": "Hub",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Android-Hub",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-OSA",
+      "category": "platform",
+      "priority": "P1",
+      "role": "Lanceur Android",
+      "nextCheck": "Tester permissions, changement de launcher et navigation appareil",
+      "dependencies": "Android",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-OSA",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-OSW",
+      "category": "platform",
+      "priority": "P1",
+      "role": "Workspace Windows WPF",
+      "nextCheck": "Tester build Windows, raccourcis et installateur",
+      "dependencies": "Windows",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-OSW",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "Warlike-Browser",
+      "category": "platform",
+      "priority": "P1",
+      "role": "Navigateur Electron",
+      "nextCheck": "Tester le vrai build Windows, WebViews et permissions",
+      "dependencies": "Electron",
+      "repositoryUrl": "https://github.com/Motherlode94/Warlike-Browser",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Hub",
+      "category": "platform",
+      "priority": "P1",
+      "role": "Portail des applications",
+      "nextCheck": "Compléter la vue portefeuille sans revendiquer un état production",
+      "dependencies": "Dépôts GitHub",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Hub",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Crypte",
+      "category": "security",
+      "priority": "P1",
+      "role": "Coffre chiffré local",
+      "nextCheck": "Effectuer revue de sécurité indépendante et restaurations sur autre navigateur",
+      "dependencies": "Web Crypto",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Crypte",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-PDF",
+      "category": "utility",
+      "priority": "P2",
+      "role": "Éditeur PDF local",
+      "nextCheck": "Tester export, fusion, réorganisation et fichiers complexes",
+      "dependencies": "PDF.js",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-PDF",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-Radio",
+      "category": "utility",
+      "priority": "P2",
+      "role": "Lecteur et programmation radio",
+      "nextCheck": "Valider flux HTTPS et distinguer lecteur d’un serveur de diffusion",
+      "dependencies": "Audio navigateur",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-Radio",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "WarLike-MISC",
+      "category": "education",
+      "priority": "P2",
+      "role": "Apprentissage instrumental",
+      "nextCheck": "Valider latence et justesse micro sur instruments réels",
+      "dependencies": "Web Audio",
+      "repositoryUrl": "https://github.com/Motherlode94/WarLike-MISC",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "Music-Generator",
+      "category": "creation",
+      "priority": "P2",
+      "role": "Projet musical annexe",
+      "nextCheck": "Inspecter le code et la raison du chevauchement avec Studio",
+      "dependencies": "Studio",
+      "repositoryUrl": "https://github.com/Motherlode94/Music-Generator",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "GAMEdesign-Course",
+      "category": "education",
+      "priority": "P2",
+      "role": "Formation game design",
+      "nextCheck": "Vérifier la progression des cours et leurs exercices",
+      "dependencies": "Engine",
+      "repositoryUrl": "https://github.com/Motherlode94/GAMEdesign-Course",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "DIVINE-SHADOW",
+      "category": "games",
+      "priority": "P2",
+      "role": "Roman/jeu narratif",
+      "nextCheck": "Compléter les scènes succinctes et tester états/sauvegardes",
+      "dependencies": "Ebook, Engine",
+      "repositoryUrl": "https://github.com/Motherlode94/DIVINE-SHADOW",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "multi-funiverse-adventure",
+      "category": "games",
+      "priority": "P2",
+      "role": "Projet d’aventure annexe",
+      "nextCheck": "Évaluer maintien ou intégration à Game Hub",
+      "dependencies": "GAME_HUB-v2",
+      "repositoryUrl": "https://github.com/Motherlode94/multi-funiverse-adventure",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    },
+    {
+      "repository": "skills-copilot-codespaces-vscode",
+      "category": "education",
+      "priority": "P2",
+      "role": "Dépôt de formation GitHub",
+      "nextCheck": "Classer comme formation externe, hors production WarLike",
+      "dependencies": "GitHub",
+      "repositoryUrl": "https://github.com/Motherlode94/skills-copilot-codespaces-vscode",
+      "evidence": "README consulté sur main (sauf les dépôts sans README : GAME_HUB-v2 et Music-Generator)",
+      "productionVerified": false
+    }
+  ]
+}
