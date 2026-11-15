@@ -20,7 +20,7 @@ jobs:
       - name: Verify future modules do not expose fake service links
         run: node --test tests/roadmap.test.mjs
       - name: Verify QA Lab public status logic
-        run: node --test tests/qa-lab.test.mjs
+        run: node --test tests/qa-lab.test.mjs tests/qa-reliability.test.mjs
       - name: Verify application entry points
         run: |
           test -s index.html
@@ -38,3 +38,4 @@ jobs:
           python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/warlike-ui.log 2>&1 &
           sleep 2
           node tests/browser-smoke.mjs
+          node tests/qa-lab-browser.mjs
