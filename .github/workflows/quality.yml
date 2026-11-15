@@ -6,7 +6,7 @@ permissions:
   contents: read
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 18
     steps:
       - uses: actions/checkout@v4
@@ -14,9 +14,11 @@ jobs:
         with:
           node-version: '22'
       - name: Check JavaScript syntax
-        run: node --check app.js
+        run: node --check app.js && node --check roadmap.js
       - name: Verify DOM to JavaScript selector contract
         run: node tests/dom-contract.mjs
+      - name: Verify future modules do not expose fake service links
+        run: node --test tests/roadmap.test.mjs
       - name: Verify application entry points
         run: |
           test -s index.html
