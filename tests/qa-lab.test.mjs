@@ -10,7 +10,7 @@ test('allowlist includes critical projects; no arbitrary GitHub URLs',()=>{
 });
 const run=(name,conclusion,status='completed',event='push',sha='abc123456789')=>({name,status,conclusion,event,head_sha:sha,html_url:'https://github.com/Motherlode94/WarLike-Engine/actions/runs/123',created_at:new Date().toISOString()});
 test('latest run per workflow has precedence and failure is visible',()=>{
- const s=summarizeRuns({workflow_runs:[run('Build','failure'),run('Build','success'),run('Test','success')]});
+ const s=summarizeRuns({workflow_runs:[{...run('Build','failure'),updated_at:new Date().toISOString()},{...run('Build','success'),updated_at:new Date(Date.now()-5000).toISOString()},run('Test','success')]});
  assert.equal(s.state,'failure');assert.equal(s.workflows.length,2);
  assert.equal(s.workflows[0].state,'failure');
 });
