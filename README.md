@@ -35,3 +35,16 @@ La version historique du Hub reste actuellement accessible à la racine de `http
 ## Contrôles mobiles
 
 Vérifier à 320, 375, 430 et 768 px : menu ouvrable et fermable, contenu accessible sans débordement horizontal, recherche fonctionnelle, tous les dossiers disponibles, liens d'applications utilisables et favoris persistants. Le contrôle syntaxique JavaScript et la présence des identifiants DOM ont été vérifiés ; la validation visuelle et tactile sur Android/iOS reste à réaliser.
+
+
+## Portefeuille de l'écosystème WarLike — audit du 16 novembre 2026
+
+La page [Portefeuille des applications](portefeuille.html) répertorie les **32 dépôts GitHub accessibles** sous Motherlode94, au-delà de l'annuaire des applications publiques du Hub.
+
+- [Registre JSON vérifiable](portfolio/warlike-applications.json) : nom du dépôt, fonction, catégorie, priorité, dépendances, prochaine validation et lien GitHub.
+- [Audit transversal détaillé](portfolio/AUDIT_TRANSVERSAL_2026-11-16.md) : P0/P1/P2, critères de sortie, ordre d'intégration et limites des vérifications.
+- Recherche et filtres dans le navigateur, sans compte et sans accès aux secrets.
+- **Important :** l'audit est documentaire et ne revendique **aucune production validée de bout en bout**. Le registre ne remplace pas les vérifications Cloudflare, les tests réels ni les revues de sécurité.
+- Les dépôts `GAME_HUB-v2` et `Music-Generator` n'ont pas de README racine accessible à cette revue ; leur code n'a pas été audité fonctionnellement ici.
+
+Vérification : `node --test tests/portfolio.test.mjs` et workflow `portfolio.yml`.
