@@ -6,11 +6,11 @@
 </head><body><main class="wrap">
 <header class="top"><a href="./index.html">← WARLIKE HUB</a><span>QUALITY ASSURANCE · BETA</span></header>
 <section class="hero"><p class="eyebrow">WARLIKE QA LAB / VERSION 0.1</p><h1>Contrôle qualité des projets</h1>
-<p>Supervision en lecture seule des derniers workflows GitHub Actions sur la branche <code>main</code>. Aucun accès à tes secrets ou à Cloudflare n'est nécessaire.</p>
+<p>Supervision en lecture seule des workflows GitHub Actions de <code>main</code> et des pull requests ouvertes. Aucun accès à tes secrets ou à Cloudflare n'est nécessaire.</p>
 <button id="refresh" type="button">Actualiser les vérifications</button>
-<p class="disclaimer">Les résultats GitHub ne prouvent pas qu'une application est fonctionnelle en production. Le contrôle ne lance pas de nouveaux tests.</p></section>
+<p class="disclaimer">Les résultats GitHub ne prouvent pas qu'une application est fonctionnelle en production. Seuls les résultats de moins de sept jours peuvent être considérés récents. Le contrôle ne lance pas de nouveaux tests.</p></section>
 <section aria-labelledby="status-heading"><div class="heading"><h2 id="status-heading">Dépôts surveillés</h2><span id="stamp">Non actualisé</span></div>
 <p id="notice" role="status" aria-live="polite">Chargement des états publics GitHub…</p>
 <div id="projects" class="projects"></div></section>
-<footer><p>Sources : API publique GitHub Actions. Un échec réseau, un quota API atteint ou l'absence de workflow signifie « Inconnu », jamais « Réussi ».</p></footer>
+<footer><p>Sources : API publique GitHub Actions. La collecte est limitée et mise en cache pendant dix minutes. Un échec réseau, un quota API atteint ou l'absence de workflow signifie « Inconnu », jamais « Réussi ».</p></footer>
 </main><script type="module" src="./qa-lab.js"></script></body></html>
