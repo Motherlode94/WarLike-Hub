@@ -93,11 +93,13 @@ export function renderRoadmap(target=document.getElementById('warlike-roadmap'))
   const article=document.createElement('article');article.className='roadmapCard';
   const top=document.createElement('div');top.className='roadmapMeta';
   const priority=document.createElement('span');priority.textContent=module.priority;
-  const status=document.createElement('span');status.textContent='À développer';
+  const status=document.createElement('span');status.textContent=module.id==='qa-lab'?'Bêta disponible':'À développer';
   top.append(priority,status);
   const heading=document.createElement('h3');heading.textContent=module.name;
   const desc=document.createElement('p');desc.textContent=module.description;
-  article.append(top,heading,desc);list.append(article);
+  article.append(top,heading,desc);
+  if(module.id==='qa-lab'){const link=document.createElement('a');link.href='./qa-lab.html';link.textContent='Ouvrir QA Lab ↗';link.className='roadmapLaunch';article.append(link);}
+  list.append(article);
  }
 }
 if (typeof document !== 'undefined') renderRoadmap();
