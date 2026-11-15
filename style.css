@@ -60,3 +60,5 @@ body{overflow-x:hidden}
 
 /* Plan d'évolution : distinct du catalogue des applications utilisables. */
 .roadmap{margin-top:36px}.roadmapIntro{color:#b7c8b7;line-height:1.65;max-width:830px}.roadmapCards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:20px}.roadmapCard{padding:20px;border:1px dashed #546b58;background:#18251d;border-radius:9px;min-width:0}.roadmapMeta{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#c0d7b7;font-size:11px;font-weight:750}.roadmapMeta span:last-child{color:#e6c78b}.roadmapCard h3{font:21px Georgia,serif;margin:14px 0 9px;overflow-wrap:anywhere}.roadmapCard p{color:#b4c4b5;line-height:1.5;margin:0}@media(max-width:1100px){.roadmapCards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.roadmapCards{grid-template-columns:1fr}.roadmapCard{padding:17px}}
+
+.roadmapLaunch{display:inline-flex;color:#cce7bf;font-weight:700;margin-top:18px;min-height:44px;align-items:center}
