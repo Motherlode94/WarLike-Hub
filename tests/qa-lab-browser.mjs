@@ -20,11 +20,11 @@ try{
  await page.goto('http://127.0.0.1:8765/qa-lab.html',{waitUntil:'load'});
  await page.waitForFunction(()=>document.querySelector('#notice')?.textContent?.includes('12 / 12'),{timeout:20000});
  const card=page.locator('.project').filter({has:page.getByRole('heading',{name:'WarLike-Engine'})});
- assert.equal(await card.locator('.status').text(),'Échec','a failing PR must override passing main');
+ assert.equal(await card.locator('.status').textContent(),'Échec','a failing PR must override passing main');
  assert.match(await card.locator('.details').innerText(),/Pull requests ouvertes : 1/);
  assert.match(await card.locator('.details').innerText(),/PR tests|#32 Animator/);
  const studio=page.locator('.project').filter({has:page.getByRole('heading',{name:'WarLike-Studio'})});
- assert.equal(await studio.locator('.status').text(),'Inconnu','rate limited API cannot be green');
+ assert.equal(await studio.locator('.status').textContent(),'Inconnu','rate limited API cannot be green');
  assert.equal(await page.locator('.project').count(),12);
  await page.getByRole('button',{name:'Actualiser les vérifications'}).click();
  assert.match(await page.locator('#notice').textContent(),/une fois par minute/);
