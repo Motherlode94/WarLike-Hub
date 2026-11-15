@@ -100,4 +100,4 @@ export function renderRoadmap(target=document.getElementById('warlike-roadmap'))
   article.append(top,heading,desc);list.append(article);
  }
 }
-renderRoadmap();
+if (typeof document !== 'undefined') renderRoadmap();
