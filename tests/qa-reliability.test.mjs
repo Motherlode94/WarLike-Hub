@@ -48,3 +48,16 @@ test('untrusted workflow URL is never clickable',()=>{
  const r=summarizeRuns({workflow_runs:[run('Test','success',{html_url:'https://evil.test/'})]},{now:NOW});
  assert.equal(r.workflows[0].url,null);
 });
+
+test('latest PR workflow result wins over older success or failure regardless of response order',()=>{
+ const sha='d'.repeat(40);
+ const base={name:'PR quality',event:'pull_request',status:'completed',head_sha:sha,html_url:'https://github.com/Motherlode94/WarLike-Engine/actions/runs/999',created_at:new Date(NOW-180000).toISOString()};
+ const older={...base,conclusion:'success',updated_at:new Date(NOW-120000).toISOString()};
+ const newer={...base,conclusion:'failure',updated_at:new Date(NOW-2000).toISOString()};
+ for(const workflow_runs of [[older,newer],[newer,older]]){
+  const summary=summarizePullRequests([pr(17,sha)],{workflow_runs},{now:NOW});
+  assert.equal(summary.prs[0].state,'failure');
+  assert.equal(summary.state,'failure');
+  assert.equal(summary.prs[0].workflows.length,1);
+ }
+});

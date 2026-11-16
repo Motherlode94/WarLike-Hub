@@ -54,7 +54,13 @@ export function summarizePullRequests(pullsPayload,runsPayload,{repo='WarLike-En
  const result=prs.map(pr=>{
   const sha=pr.head?.sha;
   const matching=runsPayload.workflow_runs.filter(run=>run.event==='pull_request'&&run.head_sha===sha&&run.name&&run.status);
-  const workflows=[...new Map(matching.sort((a,b)=>dateMillis(b)-dateMillis(a)).map(run=>[run.name,run]).reverse()).values()].map(run=>toWorkflow(run,repo,now));
+  // Preserve the newest run for each workflow, never the oldest run returned.
+  const byName=new Map();
+  for(const run of matching){
+   const prior=byName.get(run.name);
+   if(!prior||dateMillis(run)>dateMillis(prior))byName.set(run.name,run);
+  }
+  const workflows=[...byName.values()].map(run=>toWorkflow(run,repo,now));
   const latest=Date.parse(pr.updated_at||'');
   const stale=!Number.isFinite(latest)||now-latest>MAX_AGE_MS;
   return {number:pr.number,title:String(pr.title||'PR #'+pr.number).slice(0,120),draft:pr.draft===true,url:pr.html_url===`https://github.com/${OWNER}/${repo}/pull/${pr.number}`?pr.html_url:null,head:typeof sha==='string'?sha.slice(0,7):'—',state:stale?'stale':aggregate(workflows),workflows};
