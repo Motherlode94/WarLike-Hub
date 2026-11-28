@@ -4,8 +4,8 @@ Portail **autonome** de l'univers WarLike, indépendant des dépôts **WarLike S
 
 ## Fonctionnalités
 
-- Annuaire de 11 applications et services WarLike avec liens réels
-- Filtres Création, Communauté, Outils personnels, Équipe & serveur
+- Annuaire de 43 entrées (applications, services et dépôts techniques), contrôlé sur GitHub et Cloudflare Pages le 28 novembre 2026. Les liens vers un dépôt sont distingués des sites ; un déploiement réussi ne certifie pas les fonctions ni les permissions.
+- Filtres Création, Communauté, Outils personnels, Éducation, Équipe & serveur
 - Recherche instantanée et favoris enregistrés **localement** dans le navigateur
 - Interface responsive, cartes et icônes SVG
 - Navigation mobile par menu latéral, accessible au clavier (Échap, focus contenu), fermeture au clic extérieur et après choix d'un dossier
