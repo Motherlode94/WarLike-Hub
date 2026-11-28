@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {plannedModules} from '../roadmap.js';
 
-test('roadmap includes twelve distinct future modules with no fake links',()=>{
- assert.equal(plannedModules.length,12);
- assert.equal(new Set(plannedModules.map(m=>m.id)).size,12);
+test('roadmap includes ten distinct future modules with no fake links',()=>{
+ assert.equal(plannedModules.length,10);
+ assert.equal(new Set(plannedModules.map(m=>m.id)).size,10);
  for(const item of plannedModules){
   assert.match(item.name,/^WarLike /);
   assert.match(item.priority,/^P[012]$/);

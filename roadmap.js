@@ -50,13 +50,6 @@ export const plannedModules=[
     "status": "planned"
   },
   {
-    "id": "academy",
-    "name": "WarLike Academy",
-    "description": "Formations guidées Engine, Studio, scripts et 3D",
-    "priority": "P2",
-    "status": "planned"
-  },
-  {
     "id": "support",
     "name": "WarLike Support",
     "description": "Base de connaissances et suivi d'incidents",
@@ -67,13 +60,6 @@ export const plannedModules=[
     "id": "publish",
     "name": "WarLike Publish",
     "description": "Publication contrôlée des jeux, musiques, livres et vidéos",
-    "priority": "P2",
-    "status": "planned"
-  },
-  {
-    "id": "business",
-    "name": "WarLike Business",
-    "description": "Licences, abonnements, facturation et distribution commerciale",
     "priority": "P2",
     "status": "planned"
   },
